@@ -1,0 +1,10 @@
+{
+  "name": "easy-ride-pk",
+  "version": "1.1.0",
+  "description": "Premium Car Rental for EasyRidePk.com",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {}
+}

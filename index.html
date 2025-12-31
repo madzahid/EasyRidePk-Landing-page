@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Primary Tags -->
+  <title>EasyRidePk | #1 Car Rental Islamabad, Rawalpindi & Lahore</title>
+  <meta name="description" content="Premium chauffeur-driven car rental service in Islamabad, Rawalpindi, and Lahore. Luxury V8, Prado, Revo, Civic & more for weddings, corporate travel, and tours. Book 24/7.">
+  <meta name="keywords" content="car rental islamabad, car rental rawalpindi, car rental lahore, rent a car with driver pindi, luxury car rental islamabad, wedding car rental islamabad, land cruiser v8 rental, prado rental pindi">
+  <link rel="canonical" href="https://easyridepk.com/" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://easyridepk.com/">
+  <meta property="og:title" content="EasyRidePk | Premium Car Rental Islamabad, Rawalpindi & Lahore">
+  <meta property="og:description" content="The most reliable luxury car rental fleet in Pakistan. Serving Islamabad, Rawalpindi, and Lahore with professional chauffeurs.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://easyridepk.com/">
+  <meta property="twitter:title" content="EasyRidePk | Premium Car Rental Islamabad, Rawalpindi & Lahore">
+  <meta property="twitter:description" content="Luxury chauffeur-driven car rentals. Serving Islamabad, Rawalpindi, and Lahore 24/7.">
+  <meta property="twitter:image" content="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200">
+
+  <!-- Structured Data (JSON-LD) for Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CarRentalBusiness",
+    "name": "EasyRidePk.com",
+    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1920",
+    "@id": "https://easyridepk.com",
+    "url": "https://easyridepk.com",
+    "telephone": "03336732926",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Lane 17A, Sector D, PWD Society",
+      "addressLocality": "Islamabad",
+      "addressRegion": "Capital Territory",
+      "postalCode": "44000",
+      "addressCountry": "PK"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.5855,
+      "longitude": 73.1360
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "areaServed": ["Islamabad", "Rawalpindi", "Lahore"]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; scroll-behavior: smooth; }
+    .font-serif { font-family: 'Playfair Display', serif; }
+    .btn-whatsapp { background: #25D366; }
+    .hero-gradient { background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 100%); }
+    .card-glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #000; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-in { animation: fadeIn 0.5s ease-out forwards; }
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "htm": "https://esm.sh/htm@3.1.1",
+    "lucide-react": "https://esm.sh/lucide-react@0.263.1?external=react",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="module">
+    import React, { useState } from 'react';
+    import ReactDOM from 'react-dom/client';
+    import htm from 'htm';
+    import * as lucide from 'lucide-react';
+
+    const html = htm.bind(React.createElement);
+
+    const Icon = ({ name, size = 24, className = "" }) => {
+      const LucideIcon = lucide[name];
+      if (!LucideIcon) return null;
+      return React.createElement(LucideIcon, { size, className });
+    };
+
+    const DATA = {
+      name: "EasyRidePk.com",
+      address: "Lane 17A, Sector D, PWD Society, Islamabad Capital Territory, Pakistan",
+      mapQuery: "Lane 17A Islamabad",
+      phones: ["03336732926", "03440630521"],
+      whatsapp: "923336732926",
+      fleet: [
+        { id: 1, name: "Toyota Land cruiser V8", price: "25,000", type: "Elite Luxury", img: "/image/v8.jpg" },
+        { id: 2, name: "Honda Civic", price: "7,000", type: "Executive", img: "/image/civic.jpg" },
+        { id: 3, name: "Toyota Prado", price: "16,000", type: "Premium SUV", img: "/image/prado.jpg" },
+        { id: 4, name: "Toyota Revo", price: "12,000", type: "Power SUV", img: "/image/revo.jpg" },
+        { id: 5, name: "Toyota Altis X", price: "7,000", type: "Business", img: "/image/altis.jpg" },
+        { id: 6, name: "Honda BRV", price: "7,000", type: "Family SUV", img: "/image/brv.jpg" },
+        { id: 7, name: "Toyota Yaris", price: "6,000", type: "Economical", img: "/image/yaris.jpg" },
+        { id: 8, name: "Toyota Corolla Gli", price: "5,000", type: "Economical", img: "/image/corolla.jpg" }
+      ]
+    };
+
+    const Modal = ({ isOpen, onClose, title, content }) => {
+      if (!isOpen) return null;
+      return html`
+        <div className="fixed inset-0 z-[200] flex items-center justify-center p-6 bg-black/90 backdrop-blur-sm animate-in">
+          <div className="relative w-full max-w-2xl max-h-[80vh] bg-zinc-900 border border-white/10 rounded-[2rem] overflow-hidden flex flex-col">
+            <div className="p-8 border-b border-white/5 flex justify-between items-center">
+              <h3 className="text-2xl font-black italic font-serif uppercase tracking-tight">${title}</h3>
+              <button onClick=${onClose} className="p-2 hover:bg-white/5 rounded-full transition-colors">
+                <${Icon} name="X" />
+              </button>
+            </div>
+            <div className="p-8 overflow-y-auto text-white/60 leading-relaxed text-sm">
+              ${content}
+            </div>
+          </div>
+        </div>
+      `;
+    };
+
+    const App = () => {
+      const [modal, setModal] = useState({ open: false, title: '', content: null });
+
+      const openWA = (msg) => {
+        const text = msg || "I want to inquire about a car rental booking.";
+        window.open(`https://wa.me/${DATA.whatsapp}?text=${encodeURIComponent(text)}`, '_blank');
+      };
+
+      const showPrivacy = () => setModal({
+        open: true,
+        title: 'Privacy Policy',
+        content: html`
+          <div className="space-y-4">
+            <p>At EasyRidePk.com, we prioritize your privacy. We collect information like your name, contact details, and location solely to process your car rental bookings and provide support in Islamabad, Rawalpindi, and Lahore.</p>
+            <h4 className="text-white font-bold uppercase tracking-widest text-xs">Data Usage</h4>
+            <p>Your data is used to coordinate chauffeur services and communicate reservation updates. We do not sell or share your personal information with third-party marketers.</p>
+            <h4 className="text-white font-bold uppercase tracking-widest text-xs">Security</h4>
+            <p>We implement strict security protocols to ensure your data is protected against unauthorized access.</p>
+          </div>
+        `
+      });
+
+      const showToS = () => setModal({
+        open: true,
+        title: 'Terms of Service',
+        content: html`
+          <div className="space-y-4">
+            <h4 className="text-white font-bold uppercase tracking-widest text-xs">1. Chauffeur Policy</h4>
+            <p>All vehicles at EasyRidePk.com are provided with a professional chauffeur for services in Islamabad, Rawalpindi, and Lahore. Self-drive services are not available.</p>
+            <h4 className="text-white font-bold uppercase tracking-widest text-xs">2. Fuel & Tolls</h4>
+            <p>Rental rates shown cover the vehicle and driver for a 12-hour shift. Fuel consumption, motorway tolls, and parking fees are the responsibility of the client.</p>
+            <h4 className="text-white font-bold uppercase tracking-widest text-xs">3. Out-station Travel</h4>
+            <p>Rentals are valid within the city limits of Islamabad, Rawalpindi, or Lahore. Travel to other cities will incur extra mileage and driver stay charges.</p>
+          </div>
+        `
+      });
+
+      return html`
+        <div className="min-h-screen">
+          <${Modal} 
+            isOpen=${modal.open} 
+            onClose=${() => setModal({ ...modal, open: false })} 
+            title=${modal.title} 
+            content=${modal.content} 
+          />
+
+          <!-- Navbar -->
+          <nav className="fixed w-full z-[100] px-6 py-6 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent">
+            <div className="flex items-center gap-2">
+              <div className="bg-orange-600 p-2 rounded-lg"><${Icon} name="Car" className="text-white" /></div>
+              <span className="text-2xl font-black italic tracking-tighter uppercase font-serif">EasyRide<span className="text-orange-600">Pk</span></span>
+            </div>
+            <div className="hidden md:flex gap-8 text-[10px] font-black uppercase tracking-[0.3em]">
+              <a href="#fleet" className="hover:text-orange-600 transition-colors">The Fleet</a>
+              <a href="#contact" className="hover:text-orange-600 transition-colors">Location</a>
+              <a href="tel:${DATA.phones[0]}" className="text-orange-600 font-bold">${DATA.phones[0]}</a>
+            </div>
+          </nav>
+
+          <!-- Hero Section -->
+          <section className="relative h-screen flex items-center overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1920" 
+              className="absolute inset-0 w-full h-full object-cover scale-105" 
+              alt="Luxury Car Rental Islamabad Rawalpindi Lahore"
+            />
+            <div className="absolute inset-0 hero-gradient"></div>
+            
+            <div className="relative z-10 px-6 md:px-24 w-full">
+              <div className="max-w-4xl space-y-8">
+                <div className="inline-block px-4 py-1 rounded-full border border-orange-600/50 bg-orange-600/10 text-orange-500 text-[10px] font-black uppercase tracking-[0.5em] animate-pulse">
+                  Serving Islamabad, Rawalpindi & Lahore
+                </div>
+                <h1 className="text-6xl md:text-9xl font-black italic font-serif uppercase tracking-tighter leading-[0.85]">
+                  Drive The <br />
+                  <span className="text-orange-600">Standard.</span>
+                </h1>
+                <p className="text-lg md:text-xl text-white/60 max-w-xl leading-relaxed">
+                  #1 Premium Chauffeur Car Rental Service in <strong>Islamabad</strong>, <strong>Rawalpindi</strong>, and <strong>Lahore</strong>. Excellence delivered at your doorstep 24/7.
+                </p>
+                <div className="flex flex-wrap gap-4 pt-4">
+                  <button onClick=${() => openWA()} className="bg-white text-black px-10 py-5 rounded-full font-black uppercase tracking-widest text-xs hover:bg-orange-600 hover:text-white transition-all transform hover:scale-105">
+                    Book Now
+                  </button>
+                  <a href="#fleet" className="px-10 py-5 rounded-full border border-white/20 font-black uppercase tracking-widest text-xs hover:bg-white/10 transition-all">
+                    Explore Fleet
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Fleet Section -->
+          <section id="fleet" className="py-32 px-6 md:px-24 bg-zinc-950">
+            <div className="mb-20 space-y-4 text-center md:text-left">
+              <h2 className="text-4xl md:text-6xl font-black italic font-serif uppercase tracking-tighter">Premium <span className="text-orange-600">Fleet.</span></h2>
+              <p className="text-white/40 text-sm uppercase tracking-[0.3em]">Available in Islamabad, Rawalpindi & Lahore</p>
+              <div className="w-24 h-1 bg-orange-600 mx-auto md:mx-0"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              ${DATA.fleet.map(car => html`
+                <div key=${car.id} className="group relative rounded-[2rem] overflow-hidden card-glass border border-white/5 transition-all hover:border-orange-600/50">
+                  <div className="h-64 overflow-hidden relative">
+                    <img src=${car.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="${car.name} Rental" />
+                    <div className="absolute top-6 left-6 px-4 py-1 rounded-full bg-black/60 backdrop-blur border border-white/10 text-[9px] font-black uppercase tracking-widest">
+                      ${car.type}
+                    </div>
+                  </div>
+                  <div className="p-8 space-y-6">
+                    <div className="flex justify-between items-end">
+                      <div>
+                        <h3 className="text-2xl font-black italic font-serif uppercase tracking-tighter">${car.name}</h3>
+                        <p className="text-white/40 text-[10px] font-black uppercase tracking-widest mt-1">Daily Rental Starting At</p>
+                      </div>
+                      <div className="text-right">
+                        <span className="text-3xl font-black text-orange-600 tracking-tighter">Rs. ${car.price}</span>
+                      </div>
+                    </div>
+                    <button 
+                      onClick=${() => openWA(`I'm interested in the ${car.name} in Islamabad/Lahore`)}
+                      className="w-full py-4 rounded-2xl bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest hover:bg-orange-600 transition-all hover:text-white group-hover:border-transparent"
+                    >
+                      Reserve This Car
+                    </button>
+                  </div>
+                </div>
+              `)}
+            </div>
+          </section>
+
+          <!-- Contact Section -->
+          <section id="contact" className="py-32 px-6 md:px-24 bg-black border-t border-white/5">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
+              <div className="space-y-10">
+                <h2 className="text-4xl md:text-6xl font-black italic font-serif uppercase tracking-tighter">Contact <span className="text-orange-600">Us.</span></h2>
+                <p className="text-white/60 leading-relaxed">Whether you need a luxury protocol in Islamabad, an SUV in Rawalpindi, or a business sedan in Lahore, our team is ready to serve you 24/7.</p>
+                
+                <div className="space-y-8">
+                  <div className="flex gap-6">
+                    <div className="w-12 h-12 rounded-2xl bg-orange-600/10 flex items-center justify-center text-orange-600 border border-orange-600/20">
+                      <${Icon} name="MapPin" />
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40 mb-1">Office Address</p>
+                      <p className="text-xl font-bold leading-tight">${DATA.address}</p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-6">
+                    <div className="w-12 h-12 rounded-2xl bg-orange-600/10 flex items-center justify-center text-orange-600 border border-orange-600/20">
+                      <${Icon} name="Phone" />
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40 mb-1">Booking Hotlines</p>
+                      <div className="flex flex-col gap-1">
+                        ${DATA.phones.map(p => html`<a key=${p} href="tel:${p}" className="text-xl font-bold hover:text-orange-600 transition-colors">${p}</a>`)}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="w-full h-[400px] bg-white/5 rounded-[3rem] border border-white/10 flex items-center justify-center relative overflow-hidden">
+                <img src="/image/location-bg.jpg" className="absolute inset-0 w-full h-full object-cover opacity-20" alt="EasyRidePk Location" />
+                <div className="relative text-center p-10 bg-black/40 backdrop-blur-xl border border-white/10 rounded-3xl mx-6">
+                  <p className="text-sm font-black uppercase tracking-widest mb-4">View Location</p>
+                  <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(DATA.mapQuery)}" target="_blank" className="text-orange-600 font-bold border-b-2 border-orange-600 pb-1">Open Google Maps</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Footer -->
+          <footer className="py-20 px-6 md:px-24 bg-zinc-950 border-t border-white/5">
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+              <div className="flex items-center gap-2">
+                <div className="bg-orange-600 p-2 rounded-lg"><${Icon} name="Car" className="text-white" /></div>
+                <span className="text-2xl font-black italic tracking-tighter uppercase font-serif">EasyRide<span className="text-orange-600">Pk</span></span>
+              </div>
+              <div className="flex gap-8 text-[9px] font-black uppercase tracking-widest text-white/40">
+                <button onClick=${showPrivacy} className="hover:text-white transition-colors">Privacy Policy</button>
+                <button onClick=${showToS} className="hover:text-white transition-colors">Terms of Service</button>
+              </div>
+              <p className="text-[9px] font-black uppercase tracking-widest text-white/20">© ${new Date().getFullYear()} EasyRidePk.com | Serving Islamabad, Pindi & Lahore</p>
+            </div>
+          </footer>
+
+          <!-- WhatsApp FAB -->
+          <button onClick=${() => openWA()} className="fixed bottom-8 right-8 z-[100] btn-whatsapp text-white p-6 rounded-full shadow-2xl transition-all hover:scale-110 flex items-center gap-3 border-4 border-black group">
+            <${Icon} name="MessageCircle" size=${28} />
+            <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 font-black text-[10px] uppercase tracking-widest whitespace-nowrap">Chat For Booking</span>
+          </button>
+        </div>
+      `;
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(React.createElement(App));
+  </script>
+</body>
+</html>
