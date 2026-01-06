@@ -1,9 +1,3 @@
-Here is the corrected and accurate README.md for easyridepk.com based on your clarification that it is a simple HTML animated SEO-optimized landing page.
-
-You can paste this directly into your GitHub repository.
-
-⸻
-
 EasyRidePK.com
 
 SEO-Optimized Car Rental & Chauffeur Landing Page – Pakistan
