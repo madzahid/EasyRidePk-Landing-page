@@ -65,7 +65,7 @@ Performance	Lazy loading, compressed assets
 📍 Business Information
 
 EasyRidePK
-HN 339, Street 73, G-11/2, Islamabad
+G-11/2, Islamabad
 📞 WhatsApp: +92 333 5531987
 
 ⸻
